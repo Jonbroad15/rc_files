@@ -1,10 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# EDIT THIS LINE TO THE CURRENT HOMEDIR
-HOMEDIR="/home/2018/jbroad8" 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/jondesktop/.oh-my-zsh"
+export ZSH="/users/jonbroad/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -102,31 +100,38 @@ fi
 #
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$("$HOMEDIR/miniconda3/bin/conda" 'shell.bash' 'hook' 2> /dev/null)"
+export PATH="/Users/jonbroad/anaconda3/bin:$PATH"
+__conda_setup="$('/Users/jonbroad/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "$HOMEDIR/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOMEDIR/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/jonbroad/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/jonbroad/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="$HOMEDIR/miniconda3/bin:$PATH"
+        export PATH="/Users/jonbroad/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 #
+# PATH FOR DSSR
+export PATH="/Users/jonbroad/projects/RNAGlib/data:$PATH"
+# PATHS for nanopolish
+export PATH="/Users/jonbroad/.local/bin:$PATH"
 
 # ALIASES
-alias mcgill="cd /mnt/f/OneDrive\ -\ McGill\ University/School/McGill/"
-alias onedrive="cd /mnt/f/OneDrive\ -\ McGill\ University/"
+alias mcgill="cd ~/OneDrive\ -\ McGill\ University/School/McGill/"
+alias onedrive="cd ~/OneDrive\ -\ McGill\ University/"
 alias editzsh="vim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
-alias gdrive='cd /mnt/g/projects'
-alias tmuxvernaml="tmux new-session -A -s vernaml -c /mnt/g/projects/comp402/vernaml"
+#alias gdrive='cd /mnt/g/projects'
+alias tmuxvernaml="tmux new-session -A -s vernaml -c ~/projects/vernaml"
+alias tmuxglib="tmux new-session -A -s glib -c ~/projects/RNAGlib"
+alias pretty_csv='~/.bash.d/pretty_csv.sh'
 # Functions
-function pretty_csv {
-	    column -t -s, -n "$@" | less -F -S -X -K
-    }
+#function pretty_csv {
+	    #column -t -s, -n "$@"| less -F -S -X -K
+    #}
 function pretty_tsv {
 	    column -t -s $'\t' -n "$@" | less -F -S -X -K
     }
@@ -135,7 +140,17 @@ function pretty_json {
 }
 
 # Paths for latex
-export PATH="/usr/local/texlive/2020/bin/x86_64-linux:$PATH"
-export MANPATH="/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH"
-export INFOPATH="/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH"
+# /usr/local/texlive/2021/bin/universal-darwin
+export PATH="/usr/local/texlive/2021/bin/universal-darwin:$PATH"
+export MANPATH="/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH"
+
+# PYTHONPATH exports
+export PYTHONPATH="/Users/jonbroad/projects/RNAGlib/RNAGlib:$PYTHONPATH"
+export PYTHONPATH="/Users/jonbroad:$PYTHONPATH"
+
+# Extra env variables
+export COMP421SERVER="jbroad8@winter2021-comp421.cs.mcgill.ca"
+export GLIBSERVER="flask@rnaglib.cs.mcgill.ca"
+
 
