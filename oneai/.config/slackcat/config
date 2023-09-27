@@ -1,0 +1,5 @@
+default_team = "simpsonlab"
+default_channel = ""
+
+[teams]
+  simpsonlab = "xoxp-9035160002-2456328606886-3459782828403-b213b799df3034da54975a75ed8c9daf"
