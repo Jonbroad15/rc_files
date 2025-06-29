@@ -25,9 +25,6 @@ require("lazy").setup({
   { "vim-airline/vim-airline" },
   { "vim-airline/vim-airline-themes" },
 
-  -- Python dev
-  { "python-mode/python-mode", branch = "develop" },
-
   -- Syntax and utilities
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
