@@ -14,6 +14,6 @@ vim.g.pymode_python = 'python3'
 vim.g.pymode_lint = 0
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
-vim.cmd('colorscheme tokyonight')
+vim.cmd('colorscheme catppuccin-latte')
 
 

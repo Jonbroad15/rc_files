@@ -44,7 +44,8 @@ require("lazy").setup({
   end,
 },
 
-    {'folke/tokyonight.nvim'}
+    {'folke/tokyonight.nvim'},
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
 })
 
