@@ -1,8 +1,5 @@
 -- ~/.config/nvim/lua/plugins.lua
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup({
+return {
   -- GitHub Copilot
   {
     'github/copilot.vim',
@@ -44,5 +41,5 @@ require("lazy").setup({
     {'folke/tokyonight.nvim'},
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
-})
+}
 

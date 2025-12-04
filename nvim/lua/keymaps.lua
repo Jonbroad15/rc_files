@@ -1,5 +1,4 @@
 -- ~/.config/nvim/lua/keymaps.lua
-vim.g.mapleader = ","
 
 -- switch panes with Ctrl + H/J/K/L
 vim.api.nvim_set_keymap("n", "<C-J>", "<C-W><C-J>", { noremap = true })
